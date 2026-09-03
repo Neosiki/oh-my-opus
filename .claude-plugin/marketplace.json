@@ -1,0 +1,14 @@
+{
+  "name": "oh-my-opus",
+  "owner": {
+    "name": "Youngsik Yun (NextAI)"
+  },
+  "description": "Per-model prompting rules for Claude Code: the right ruleset for the model you are actually running, switched automatically.",
+  "plugins": [
+    {
+      "name": "oh-my-opus",
+      "source": ".",
+      "description": "Model-aware always-on rules via SessionStart + PostModelSwitch hooks; /opus-prompt rewrites rough requests; /opus-setup audits conflicting rules and sets mode."
+    }
+  ]
+}

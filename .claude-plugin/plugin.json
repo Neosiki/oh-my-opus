@@ -1,0 +1,11 @@
+{
+  "name": "oh-my-opus",
+  "version": "0.1.0",
+  "description": "Model-aware prompting rules for Claude Code. A SessionStart hook detects the active model and injects the matching ruleset from Anthropic's per-model prompting guides (Opus 5, Fable 5.1), and a PostModelSwitch hook re-injects when you switch models mid-session. /opus-prompt rewrites a rough request; /opus-setup audits your CLAUDE.md for rules that fight the active model.",
+  "author": {
+    "name": "Youngsik Yun (NextAI)",
+    "email": "osiki999@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": ["claude", "claude-code", "opus-5", "prompting", "skills", "hooks"]
+}
