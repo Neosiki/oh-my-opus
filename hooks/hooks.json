@@ -1,0 +1,28 @@
+{
+  "description": "oh-my-opus: injects the ruleset matching the active model at session start, and again whenever the model changes",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|clear|compact|resume|fork",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/session-start.sh\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PostModelSwitch": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/model-switch.sh\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}
